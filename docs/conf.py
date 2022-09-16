@@ -19,21 +19,16 @@
 import sys
 import os
 
-VERSION = '2.9'
-AUTHOR = 'Ansible, Inc'
-
-
-
-
 project = "Basic Sphinx Example Project"
 copyright = "2022, Read the Docs core team"
-author = AUTHOR
-
-html_title = 'Ansible Documentation'
+author = "Read the Docs core team"
 
 
 # -- General configuration ---------------------------------------------------
 # -- General configuration
+
+sys.path.append(os.path.abspath(os.path.join('.', '_extensions')))
+
 
 extensions = [
     "sphinx.ext.duration",
@@ -42,7 +37,9 @@ extensions = [
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
     'pygments_lexer',
-    ]
+]
+
+
 
 intersphinx_mapping = {
     "rtd": ("https://docs.readthedocs.io/en/stable/", None),
@@ -51,7 +48,10 @@ intersphinx_mapping = {
 }
 intersphinx_disabled_domains = ["std"]
 
-templates_path = ["templates"]
+# The name of the Pygments (syntax highlighting) style to use.
+pygments_style = 'sphinx'
+
+templates_path = ["_templates"]
 
 # -- Options for EPUB output
 epub_show_urls = "footnote"
@@ -66,46 +66,26 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-
-html_theme_path = ['_themes']
-
-html_theme = 'sphinx_rtd_theme'
-
-html_short_title = 'Ansible Documentation'
-html_show_sphinx = False
-
-html_theme_options = {
-    'canonical_url': "https://docs.ansible.com/ansible/latest/",
-    'vcs_pageview_mode': 'edit'
-}
-
+html_theme = "sphinx_rtd_theme"
 highlight_language = 'YAML+Jinja'
-sys.path.append(os.path.abspath(os.path.join('.', '_extensions')))
-
-
-html_context = {
-    'display_github': 'True',
-    'github_user': 'ansible',
-    'github_repo': 'ansible',
-    'github_version': 'devel/docs/docsite/rst/',
-    'github_module_version': 'devel/lib/ansible/modules/',
-    'github_root_dir': 'devel/lib/ansible',
-    'github_cli_version': 'devel/lib/ansible/cli/',
-    'current_version': VERSION,
-    'latest_version': '3',
-    # list specifically out of order to make latest work
-    'available_versions': ('2.9'),
-    'css_files': ('_static/ansible.css',  # overrides to the standard theme
-                  ),
-
-}
-pygments_style = 'sphinx'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
-latex_documents = [
-    ('index', 'ansible.tex', 'Ansible 2.2 Documentation', AUTHOR, 'manual'),
-]
+# html_context = {
+#     'display_github': 'True',
+#     'github_user': 'ansible',
+#     'github_repo': 'ansible',
+#     'github_version': 'devel/docs/docsite/rst/',
+#     'github_module_version': 'devel/lib/ansible/modules/',
+#     'github_root_dir': 'devel/lib/ansible',
+#     'github_cli_version': 'devel/lib/ansible/cli/',
+#     'current_version': 2.9,
+#     'latest_version': '2.9',
+#     # list specifically out of order to make latest work
+#     'available_versions': ('latest', '2.9', 'devel'),
+#     'css_files': ('_static/style.css',  # overrides to the standard theme
+#                   ),
+# }

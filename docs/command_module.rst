@@ -16,12 +16,12 @@ command -- Execute commands on targets
 
 Synopsis
 --------
-* The ``command`` module takes the command name followed by a list of space-delimited arguments.
-* The given command will be executed on all selected nodes.
-* The command(s) will not be processed through the shell, so variables like ``$HOME`` and operations like ``"<"``, ``">"``, ``"|"``, ``";"`` and ``"&"`` will not work. Use the :ref:`shell <shell_module>` module if you need these features.
-* To create ``command`` tasks that are easier to read than the ones using space-delimited arguments, pass parameters using the ``args`` `task keyword <../reference_appendices/playbooks_keywords.html#task>`_ or use ``cmd`` parameter.
-* Either a free form command or ``cmd`` parameter is required, see the examples.
-* For Windows targets, use the :ref:`win_command <win_command_module>` module instead.
+- The ``command`` module takes the command name followed by a list of space-delimited arguments.
+- The given command will be executed on all selected nodes.
+- The command(s) will not be processed through the shell, so variables like ``$HOME`` and operations like ``"<"``, ``">"``, ``"|"``, ``";"`` and ``"&"`` will not work. Use the :ref:`shell <shell_module>` module if you need these features.
+- To create ``command`` tasks that are easier to read than the ones using space-delimited arguments, pass parameters using the ``args`` `task keyword <../reference_appendices/playbooks_keywords.html#task>`_ or use ``cmd`` parameter.
+- Either a free form command or ``cmd`` parameter is required, see the examples.
+- For Windows targets, use the :ref:`win_command <win_command_module>` module instead.
 
 
 
@@ -31,7 +31,7 @@ Parameters
 
 .. raw:: html
 
-    <table  border=0 cellpadding=0 class="documentation-table">
+    <table  border=1 cellpadding=0 class="documentation-table">
         <tr>
             <th colspan="1">Parameter</th>
             <th>Choices/<font color="blue">Defaults</font></th>
@@ -287,7 +287,7 @@ Common return values are documented :ref:`here <common_return_values>`, the foll
 
 .. raw:: html
 
-    <table border=0 cellpadding=0 class="documentation-table">
+    <table border=1 cellpadding=0 class="documentation-table">
         <tr>
             <th colspan="1">Key</th>
             <th>Returned</th>
