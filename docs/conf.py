@@ -19,7 +19,7 @@
 import sys
 import os
 
-project = "Ansible русская документация"
+project = "Ansible 2.9 русская документация"
 copyright = "2022, RoboInterativo team"
 author = "Переведено RoboInterativo team"
 
