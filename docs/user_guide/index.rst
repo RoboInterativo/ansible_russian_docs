@@ -10,4 +10,4 @@ This guide covers how to work with Ansible, including using the command line, wo
    :maxdepth: 2
 
 
-   modules
+  command_line_tools

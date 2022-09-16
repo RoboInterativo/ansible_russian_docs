@@ -44,23 +44,5 @@ Contributors develop and change modules and plugins, hosted in collections since
    :maxdepth: 2
    :caption: Installation, Upgrade & Configuration
 
-   installation_guide/index
-   porting_guides/porting_guides
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Using Ansible
-
    user_guide/index
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contributing to Ansible
-
-   community/index
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Extending Ansible
-
-   dev_guide/index
+  
