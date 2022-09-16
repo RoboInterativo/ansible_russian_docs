@@ -11,6 +11,7 @@
 Техподдержка
 ===========
 
+1
 To clarify who maintains each included module, adding features and fixing bugs, each included module now has associated metadata that provides information about maintenance.
 
 Core
