@@ -19,9 +19,9 @@
 import sys
 import os
 
-project = "Basic Sphinx Example Project"
-copyright = "2022, Read the Docs core team"
-author = "Read the Docs core team"
+project = "Ansible русская документация"
+copyright = "2022, RoboInterativo team"
+author = "Переведено RoboInterativo team"
 
 
 # -- General configuration ---------------------------------------------------
@@ -74,18 +74,10 @@ highlight_language = 'YAML+Jinja'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
-# html_context = {
-#     'display_github': 'True',
-#     'github_user': 'ansible',
-#     'github_repo': 'ansible',
-#     'github_version': 'devel/docs/docsite/rst/',
-#     'github_module_version': 'devel/lib/ansible/modules/',
-#     'github_root_dir': 'devel/lib/ansible',
-#     'github_cli_version': 'devel/lib/ansible/cli/',
-#     'current_version': 2.9,
-#     'latest_version': '2.9',
-#     # list specifically out of order to make latest work
-#     'available_versions': ('latest', '2.9', 'devel'),
-#     'css_files': ('_static/style.css',  # overrides to the standard theme
-#                   ),
-# }
+html_context = {
+
+     'current_version': '2.9',
+     'latest_version': '2.9',
+     'available_versions': ('latest', '2.9' ),
+
+}
