@@ -16,6 +16,8 @@
 
 
 # -- Project information -----------------------------------------------------
+import sys
+import os
 
 VERSION = '2.9'
 AUTHOR = 'Ansible, Inc'
@@ -39,8 +41,8 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
-
-]
+    'pygments_lexer',
+    ]
 
 intersphinx_mapping = {
     "rtd": ("https://docs.readthedocs.io/en/stable/", None),
@@ -49,7 +51,7 @@ intersphinx_mapping = {
 }
 intersphinx_disabled_domains = ["std"]
 
-templates_path = ["_templates"]
+templates_path = ["templates"]
 
 # -- Options for EPUB output
 epub_show_urls = "footnote"
@@ -64,7 +66,22 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "sphinx_rtd_theme"
+
+html_theme_path = ['_themes']
+
+html_theme = 'sphinx_rtd_theme'
+
+html_short_title = 'Ansible Documentation'
+html_show_sphinx = False
+
+html_theme_options = {
+    'canonical_url': "https://docs.ansible.com/ansible/latest/",
+    'vcs_pageview_mode': 'edit'
+}
+
+highlight_language = 'YAML+Jinja'
+sys.path.append(os.path.abspath(os.path.join('.', '_extensions')))
+
 
 html_context = {
     'display_github': 'True',
@@ -78,10 +95,17 @@ html_context = {
     'latest_version': '3',
     # list specifically out of order to make latest work
     'available_versions': ('2.9'),
+    'css_files': ('_static/ansible.css',  # overrides to the standard theme
+                  ),
 
 }
+pygments_style = 'sphinx'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+
+latex_documents = [
+    ('index', 'ansible.tex', 'Ansible 2.2 Documentation', AUTHOR, 'manual'),
+]

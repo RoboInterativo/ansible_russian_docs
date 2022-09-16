@@ -9,4 +9,5 @@ This guide covers how to work with Ansible, including using the command line, wo
 .. toctree::
    :maxdepth: 2
 
-  modules
+
+  command_module
