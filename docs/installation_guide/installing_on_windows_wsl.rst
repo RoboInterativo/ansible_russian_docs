@@ -22,7 +22,10 @@
 -----------------
 
 .. code-block:: bash
+
     Systeminfo.exe
+
+
 
 .. image:: images/Ansible-win10-008.PNG
   :width: 600
@@ -53,7 +56,7 @@
 
 Скачайте пакет последней версии:
 
-[https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi |Пакет обновления ядра Linux в WSL 2 для 64-разрядных компьютеров]
+`Пакет обновления ядра Linux в WSL 2 для 64-разрядных компьютеров <https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi>`_
 
 Запустите пакет обновления, скачанный на предыдущем этапе. (Для запуска щелкните дважды. Появится запрос на повышение уровня разрешений. Нажмите кнопку "Да", чтобы утвердить эту установку.)
 
