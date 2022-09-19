@@ -29,3 +29,4 @@ Ansible выпускает новую основную версию Ansible пр
       :caption: Использование Ansible
 
       user_guide/index
+      installation_guide/index
