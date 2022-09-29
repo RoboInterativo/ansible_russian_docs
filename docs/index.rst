@@ -30,3 +30,4 @@ Ansible выпускает новую основную версию Ansible пр
 
       user_guide/index
       installation_guide/index
+      reference_appendices/YAMLSyntax
